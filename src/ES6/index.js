@@ -19,3 +19,8 @@ function functionECMA(name='Diego',age=20,country='Mex') {
 }
 
 
+/*Lammada de la función*/
+
+functionECMA();
+functionECMA('Maria',30,'COL');
+
