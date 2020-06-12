@@ -68,3 +68,61 @@ let p2=`Hola mi nombre es Diego de Granda
  y ya soy Ingeniero Front end */
 
 
+//Desestructuración
+
+
+let person= {
+    'name':'Diego',
+    'age': 20,
+    'Country':'MX'
+}
+
+/* La forma convencional del manejo de objetos en JS era usando
+la famosa nomenclatura del punto pero ECMAS lo cambió bastante veamos la forma tradicional
+ */
+
+ console.log(person.Country,person.name,person.age);
+//Output: MX Diego 20
+
+
+ //DESESTRUCTURADO EL OBJETO 
+/*Estamos extrayendo los elementos de el obejto en este caso uno a uno evitado el uso de la famosa nomenclatura del punto
+pero no es que debamos extraer todos podemos solo llamar algunos de los elementos*/
+ let { name,  age , Country}= person;
+ console.log(name,age, Country);
+//Output : Diego 20 MX
+
+
+//Operador de propagación
+
+let team1= ['Diego','Jesus','Alexa'];
+let team2=['Aldo','Jose','Montse'];
+
+// Esto nos permite traer a los elementos de cada arreglo a este nuevo arreglo  
+// Sintaxis ...Var
+let work= ['David',...team1, ...team2];
+
+console.log(work);
+
+
+/*Seguramente ya habrás notado que estoy usando LET y que al principio use VAR 
+esta es una nueva caracteristica de ECMAS6 hay bastantes diferentes entre eestas dos formas de delcarar variables
+primero LET  solo se ve afectada por el scope de un codigo y var es de tipo global */
+
+
+
+{
+    var globalVAR = "Var global "
+}
+
+console.log(globalVAR);
+//output : Var global 
+
+{
+    let globalLet= "Let global"
+    console.log(globalLet);
+    //output: "Let global"
+}
+
+console.log(globalLet);
+//ouput: undifined
