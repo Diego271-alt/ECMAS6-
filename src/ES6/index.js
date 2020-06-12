@@ -19,8 +19,52 @@ function functionECMA(name='Diego',age=20,country='Mex') {
 }
 
 
-/*Lammada de la función*/
-
+/*Lammada de la función de ECMA*/
 functionECMA();
+//Output : Diego 20 MEX
 functionECMA('Maria',30,'COL');
+//Output : Maria 30 COL
+
+//Concatenación 
+
+//Primero la foma convencional de concatenación era la siguiente: 
+let hola="Hallo";
+let world="Mundus";
+
+//se podía hacer de forma asi Var1+ ''+ var2
+let epicPhrase= hola+' '+world
+console.log(epicPhrase)
+//Output : Hallo Mundus
+
+//Template Literals 
+/* los template literals nos sirven para concatenar los elemento
+de una forma más intuitiva si bien eso no solo nos permite adignar valor dinamicos 
+a llamadas de API en templates de JS también nos permite evitar el uso de los operadores +*/
+
+let epic2= `${hola} ${world}`;
+console.log(epic2)
+//Output : Hallo Mundus
+
+
+/* Los saltos de linea convencionales nos obligaban a usar el + y el operador \n para saltar de linea */
+let p= "Hola mi nombre es Diego Romero Mora \n" 
++" y me gustaria ser Ingeniero Front end";
+
+
+/* EL uso de los template literals nos permiten evitar el uso de el operador + y de \n 
+para hacer saltos de linea */
+let p2=`Hola mi nombre es Diego de Granda 
+ y ya soy Ingeniero Front end`;
+
+ console.log(p);
+ /* Output:
+ Hola mi nombre es Diego Romero Mora 
+ y me gustaria ser Ingeniero Front end */
+
+ console.log(p2);
+
+ /*Output :
+ Hola mi nombre es Diego de Granda 
+ y ya soy Ingeniero Front end */
+
 
