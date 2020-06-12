@@ -124,5 +124,77 @@ console.log(globalVAR);
     //output: "Let global"
 }
 
-console.log(globalLet);
+//console.log(globalLet);
 //ouput: undifined
+
+
+let nombre= 'Diego'
+
+let edad= 20;
+//Convencional
+obj= {
+    nombre :nombre,
+    edad: edad
+}
+
+
+//Ecmas6
+obj2 = {
+    nombre,
+    edad
+}
+
+
+//promesas
+const hellowPromise = () => {
+    return new Promise((resolve ,reject)=> {
+
+        if(true){
+            resolve('yes');
+        }else{
+            reject('nope');
+        }
+    })
+}
+
+
+hellowPromise()
+    .then(Response => console.log(Response))
+    .catch(error => console.log(error));
+
+
+
+ class calculadora {
+        constructor(){
+            this.valueA =0;
+            this.valueB = 0;
+        }
+        sumar(valueA,valueB){
+            this.valueA=valueA
+            this.valueB=valueB;
+            return this.valueB+ this.valueA
+        }
+    }
+
+    const calc =new calculadora();
+
+    console.log(calc.sumar(3,3));
+
+
+    //generadores
+
+    function* helloWorld(){
+        if(true){
+            yield 'Hello, new Gen'
+        }
+        if(true){
+            yield ' Opciones'
+        }
+    }
+
+    const generador= helloWorld();
+
+
+    console.log(generador.next().value)
+    console.log(generador.next().value)
+    console.log(generador.next().value)
